@@ -100,7 +100,7 @@ jobs:
           id: timestamp
           run: echo "TIMESTAMP=$(date +%s)" >> $GITHUB_ENV
 
-        - name: Set repository owner
+        - name: Set repository name
           id: set-repo
           run: echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
 
