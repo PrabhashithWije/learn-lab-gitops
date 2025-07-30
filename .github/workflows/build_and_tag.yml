@@ -93,7 +93,7 @@ jobs:
 
         permissions:
             contents: write
-            packages: write_package
+            packages: write
             
         steps:
         - name: Set Timestamp
@@ -122,7 +122,7 @@ jobs:
             context: app/
             file: app/Dockerfile.frontend
             push: true
-            tags: ${{ env.REGISTRY }}/${{ env.REPO }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.TIMESTAMP }}
+            tags: ${{ env.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.TIMESTAMP }}
 
         - id: get-frontend-build-name
           name: Save frontend image path to file
@@ -140,7 +140,7 @@ jobs:
             context: app/
             file: app/Dockerfile.backend
             push: true
-            tags: ${{ env.REGISTRY }}/${{ env.REPO }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.TIMESTAMP }}
+            tags: ${{ env.REGISTRY }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.TIMESTAMP }}
 
         - id: get-backend-build-name
           name: Save backend image path to file
