@@ -1,6 +1,6 @@
 # Scope package to github repo, not org
 # LABEL org.opencontainers.image.source=https://github.com/ORG/REPO
-FROM golang:1.22
+FROM golang:1.24
 
 WORKDIR /app
 
