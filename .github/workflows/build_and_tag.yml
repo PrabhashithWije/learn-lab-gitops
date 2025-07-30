@@ -93,7 +93,7 @@ jobs:
 
         permissions:
             contents: write
-            packages: write
+            packages: write_package
             
         steps:
         - name: Set Timestamp
